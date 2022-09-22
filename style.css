@@ -13,13 +13,10 @@
    margin:0px;
    background-color:black;
    display: flex;
-   left: 50%;
-   top:50%;
+   left: 700px;
+   top:75%;
    position: absolute;
    justify-content: center;
-}
-.moveLeft{
-    transform: translateX(-2px);
 }
 .area{
     width: 100%;
@@ -34,7 +31,8 @@
     height: 490px;
     display:flex;
    justify-content: center;
-   overflow: hidden;
+   z-index: 1000;
+   /* overflow: hidden; */
     border: 2px solid #000;
 
 }
@@ -52,6 +50,7 @@
 .enemy{
     width:35px;
     height: 35px;
+    z-index: 10;
     position: absolute;
     background-color: red;
 }
@@ -69,10 +68,23 @@
 .attack{
 background-color: blueviolet;
 position: absolute;
+border-radius: 100px;
+display: none;
+z-index: 10000;
 width:15px;
 height: 15px;
-transition-duration:20s;
+transition-duration:10s;
 }
+.attack-animation{
+    animation-name: attack;
+    display:block;
+    animation-duration: 4s;
+    top:50px;
+}
+@keyframes attack {
+    0% {top:75%;}
+    100% {top: 20%;}
+  }
 .score-zone{
     display: flex;
     justify-content: flex-end;
@@ -100,5 +112,52 @@ transition-duration:20s;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.start-menu{
+    border: 1px solid #000;
+    width:650px;
+    height: 350px;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.game-menu-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Slackey', cursive;
+}
+.game-start{
+    background-color: orangered;
+    border-radius: 20px;
+    display: flex;
+    width:150px;
+    height: 50px;
+    margin: 20px;
+    z-index: 100000;
+    cursor: pointer;
+    transition-duration: 1.5s;
+}
+.game-start:hover{
+    transform: scale(1.15);
+    transition-duration: 1.5s;
+}
+
+.game-settings{
+    background-color: orangered;
+    border-radius: 20px;
+    display: flex;
+    width:150px;
+    height: 50px;
+    margin: 20px;
+    z-index: 100000;
+    cursor: pointer;  
+    transition-duration: 1.5s;  
+}
+.game-settings:hover{
+    transform: scale(1.15);
+    transition-duration: 1.5s;  
 }
 
