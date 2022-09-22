@@ -50,6 +50,7 @@
 .enemy{
     width:35px;
     height: 35px;
+    margin-left:22px;
     z-index: 10;
     position: absolute;
     background-color: red;
@@ -58,6 +59,12 @@
     animation: cubic-bezier(.17,.67,.83,.67);
     animation-duration: 6s;
     animation-name: enemy-animation;
+}
+.bigger-enemy-area{
+    width:80px;
+    height: 35px;
+    z-index: 10;
+    position: absolute;
 }
 @keyframes enemy-animation {
     0% {top: 170px;}
@@ -71,9 +78,19 @@ position: absolute;
 border-radius: 100px;
 display: none;
 z-index: 10000;
+margin-top:8px;
+margin-left:17px;
 width:15px;
 height: 15px;
 transition-duration:10s;
+}
+.attack-zone{
+    display: none;
+    margin-left:10px;
+    position: absolute;
+    transition-duration:10s;
+    width:30px;
+    height: 30px;
 }
 .attack-animation{
     animation-name: attack;
@@ -91,6 +108,16 @@ transition-duration:10s;
     width:100%;
     height:50px;
 }
+.main-score{
+    border-radius: 25px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    width: 150px;
+    height: 100%;
+}
 .clock{
     border-radius: 20px;
     border: 1px solid #000;
@@ -106,9 +133,24 @@ transition-duration:10s;
     width: 50px;
     height: 50px;
 }
+.score-style-1{
+    font-family: 'Slackey', cursive;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px; 
+    margin-left: 7px;
+}
+.score-style{
+    font-family: 'Slackey', cursive;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px; 
+}
 .dots{
     font-family: 'Slackey', cursive;
-    width: 0px;
+    width: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
