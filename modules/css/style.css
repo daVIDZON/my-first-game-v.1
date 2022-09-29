@@ -69,7 +69,8 @@
 }
 @keyframes enemy-animation {
     0% {top: -100%}
-    100% {top: 100%;}
+    100% {top: 100%;
+        display: none;}
   }
 
 .attack{
@@ -161,10 +162,29 @@ height: 15px;
     height: 350px;
     position: absolute;
     align-items: center;
+    z-index: 15;
     flex-direction: column;
     display: flex;
     justify-content: center;
 }
+.settings-menu{
+    border: 1px solid #000;
+    background-color: blueviolet;
+    width:650px;
+    height: 350px;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+}
+.settings-menu-animation{
+   animation-duration: 1.3s;
+   animation-name:settings;
+   height: 500px;
+}
+@keyframes settings {
+    0% { height: 350px;}
+    100%{ height: 500px;}
+  }
 .game-menu-text{
     display: flex;
     align-items: center;
@@ -178,7 +198,7 @@ height: 15px;
     width:150px;
     height: 50px;
     margin: 20px;
-    z-index: 100000;
+    z-index: 100;
     cursor: pointer;
     transition-duration: 1.5s;
 }
@@ -194,7 +214,7 @@ height: 15px;
     width:150px;
     height: 50px;
     margin: 20px;
-    z-index: 100000;
+    z-index: 100;
     cursor: pointer;  
     transition-duration: 1.5s;  
 }
@@ -247,3 +267,22 @@ height: 15px;
     50% {top:25%;}
     100%{top: 100%;}
   }
+.slider{
+    width: 120px;
+    height: 25px;
+    background-color: #000;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}

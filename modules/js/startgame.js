@@ -1,4 +1,5 @@
-import { levelOne } from '../script'
+import levelOne from "../js/level1";
+import {levels} from '../js/levels';
 
 function startMenu() {
     const ZoneArea = document.querySelector('.main-area');
@@ -10,6 +11,7 @@ function startMenu() {
     startGame.addEventListener("click", () => {
         ZoneArea.style.display = "flex";
         startMenuOfgame.style.display = "none";
+        setInterval(levels, 120000);
         levelOne();
     });
 
